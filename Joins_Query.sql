@@ -19,7 +19,7 @@ Credit_hours varchar(200),
 INSERT INTO Courses values ('Accounting','3'),('Economics','3'),('Business Communication','2'),('Statistics','4');
 
 CREATE TABLE Grades(
---grade_id int primary key identity(1,1),
+grade_id int primary key identity(1,1),
 Student_ID int foreign key references Student(Student_id),
 Course_ID int foreign key references Courses(Course_Id),
 Grade varchar(200)
