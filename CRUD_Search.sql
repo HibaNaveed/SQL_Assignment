@@ -56,3 +56,11 @@ as
 select * FROM Events  WHERE  EventName = @EventName
 go
 Exec Search @EventName ='Carnival'
+
+--Search By Name
+create procedure Search1
+@EventName varchar(20)
+as
+SELECT * FROM Events WHERE EventName LIKE '%' + @EventName + '%';
+go
+Exec Search1 @EventName = 'Birthday';
